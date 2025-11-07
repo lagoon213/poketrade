@@ -45,6 +45,11 @@ jobs:
           cd frontend/poketrade-frontend/poketrade-frontend
           npm install
 
+      - name: Run frontend tests
+        run: |
+          cd frontend/poketrade-frontend/poketrade-frontend
+          npm run test
+
       - name: Build frontend
         run: |
           cd frontend/poketrade-frontend/poketrade-frontend
