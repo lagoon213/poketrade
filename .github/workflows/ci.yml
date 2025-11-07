@@ -47,5 +47,5 @@ jobs:
 
       - name: Build frontend
         run: |
-          cd frontend
+          cd frontend/poketrade-frontend
           npm run build
