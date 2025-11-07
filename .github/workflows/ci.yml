@@ -43,7 +43,7 @@ jobs:
       - name: Install frontend dependencies
         run: |
           cd frontend/poketrade-frontend
-          npm ci
+          npm install
 
       - name: Build frontend
         run: |
