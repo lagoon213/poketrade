@@ -20,15 +20,14 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd backend
-          python -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt || pip install django
-          
+          cd backend/poketrade-backend
+          pip install -r requirements.txt
+
       - name: Run Django checks
         run: |
           cd backend/poketrade-backend
           python manage.py check
+
 
   test_frontend:
     runs-on: ubuntu-latest
