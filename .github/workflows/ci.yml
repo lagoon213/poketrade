@@ -27,7 +27,7 @@ jobs:
           
       - name: Run Django checks
         run: |
-          cd backend
+          cd backend/poketrade-backend
           python manage.py check
 
   test_frontend:
@@ -43,7 +43,7 @@ jobs:
 
       - name: Install frontend dependencies
         run: |
-          cd frontend
+          cd frontend/poketrade-frontend
           npm ci
 
       - name: Build frontend
