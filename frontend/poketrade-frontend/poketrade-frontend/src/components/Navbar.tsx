@@ -1,7 +1,9 @@
 ﻿import './Navbar.css'
 import pokeTradeLogo from '../assets/logo-PokeTrade.png'
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+    const Navigate = useNavigate();
     return (
             <div>
                 <div className="navbar">
@@ -13,9 +15,9 @@ export default function Navbar() {
                         <h2>Home</h2>
                         <h2>Trades</h2>
                         <h2>Collection</h2>
-                        <button>Login</button>
+                        <button onClick={() => Navigate("/login")}>Login</button>
                     </div>
                 </div>
             </div>
-    )
+    );
 }
