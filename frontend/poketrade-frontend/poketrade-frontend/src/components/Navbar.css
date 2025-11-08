@@ -1,0 +1,53 @@
+﻿h1 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navbar img{
+    height: 5rem;
+}
+
+.navbar-brand {
+    align-self: flex-start;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 4rem;
+    padding-right: 2rem;
+    line-height: normal;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navbar-buttons button {
+    all: unset;
+    display: inline-block;
+    color: #2600FF;
+
+    border: 2px solid #2600FF;
+    border-radius: 6px;
+    background: transparent;
+
+    padding: 5px 18px 5px 18px;
+    height: 32px;
+    box-sizing: border-box;
+}
