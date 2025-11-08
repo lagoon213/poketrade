@@ -1,26 +1,31 @@
 ﻿import { render, screen } from "@testing-library/react";
 import Home from "../home/Home";
+import { BrowserRouter } from "react-router-dom";
+
+function renderWithRouter(ui: React.ReactElement) {
+    return render(<BrowserRouter>{ui}</BrowserRouter>);
+}
 
 test("renders homepage title", () => {
-    render(<Home />);
+    renderWithRouter(<Home />);
     const title = screen.getByText(/Ruil je Pokemon kaarten eenvoudig en veilig/i);
     expect(title).toBeInTheDocument();
 });
 
 test("renders homepage text", () => {
-    render(<Home />);
+    renderWithRouter(<Home />);
     const text = screen.getByText(/Vindt verzamelaars, maak afspraken en breid je collectie uit/i);
     expect(text).toBeInTheDocument();
 });
 
 test("renders signup button", () => {
-    render(<Home />);
+    renderWithRouter(<Home />);
     const button = screen.getByText(/Maak account aan/i);
     expect(button).toBeInTheDocument();
 });
 
 test("renders open trades section", () => {
-    render(<Home />);
+    renderWithRouter(<Home />);
     const sectionTitle = screen.getByText(/Openstaande trades/i);
     expect(sectionTitle).toBeInTheDocument();
 });
