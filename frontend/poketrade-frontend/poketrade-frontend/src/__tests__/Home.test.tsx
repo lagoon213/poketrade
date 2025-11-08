@@ -14,8 +14,10 @@ test("renders homepage title", () => {
 
 test("renders homepage text", () => {
     renderWithRouter(<Home />);
-    const text = screen.getByText(/Vindt verzamelaars, maak afspraken en breid je collectie uit/i);
+    const text = screen.getByText(/Vindt verzamelaars, maak afspraken/i);
+    const lineBreak = screen.getByText(/en breid je collectie uit/i);
     expect(text).toBeInTheDocument();
+    expect(lineBreak).toBeInTheDocument();
 });
 
 test("renders signup button", () => {
