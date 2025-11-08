@@ -22,4 +22,4 @@ test("renders navigation links", () => {
     expect(tradesLink).toBeInTheDocument();
     expect(collectionLink).toBeInTheDocument();
     expect(loginLink).toBeInTheDocument();
-}
+});

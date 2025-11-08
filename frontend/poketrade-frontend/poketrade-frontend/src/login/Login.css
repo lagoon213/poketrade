@@ -1,0 +1,93 @@
+﻿.login-page{
+    margin-top: 5rem;
+}
+
+.login-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-logo img{
+    height: 8rem;
+}
+
+.login-logo h1{
+    font-size: 3rem;
+}
+
+.login-page h2{
+    justify-content: center;
+    display: flex;
+    color: #414141;
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+}
+
+.login-page p{
+    display: flex;
+    all: unset;
+    justify-content: center;
+    text-align: center;
+}
+
+.login-page a{
+    color: #2600FF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+label{
+    font-family: "Jomolhari", sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+input {
+    all: unset;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+button{
+    all: unset;
+    display: inline-block;
+    color: white;
+    font-size: large;
+    font-family: "Inter", sans-serif;
+
+    background: #2C5DFF;
+    border-radius: 10px;
+
+    padding: 5px 100px 7px 100px;
+    height: 40px;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    align-self: center;
+    cursor: pointer;
+}
+
+.login-page h3{
+    text-decoration: underline;
+    font-family: "Jomolhari", sans-serif;
+    color: gray;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
