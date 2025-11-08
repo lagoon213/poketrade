@@ -1,0 +1,48 @@
+﻿.footer {
+    overflow: hidden;
+    position: relative;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-top-line {
+    width: 100%;
+    height: 0.3rem;
+    background-color: darkgray;
+}
+
+.footer-triangle {
+    width: 100%;
+    height: 120px;
+    background: lightgray;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.footer-navigation {
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+    position: relative;
+    padding-top: 42px;
+    padding-left: 2rem;
+}
+
+.logo img {
+    height: 3rem;
+}
