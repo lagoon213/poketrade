@@ -9,12 +9,12 @@ export default function Navbar() {
                 <div className="navbar">
                     <div className="navbar-brand">
                         <img src={pokeTradeLogo} className="logo-poketrade" alt="PokeTrade logo" />
-                        <h1>POKETRADE</h1>
+                        <h1 onClick={()=> Navigate("/")}>POKETRADE</h1>
                     </div>
                     <div className="navbar-buttons">
-                        <h2>Home</h2>
+                        <h2 onClick={()=> Navigate("/")}>Home</h2>
                         <h2>Trades</h2>
-                        <h2>Collection</h2>
+                        <h2 onClick={() => Navigate("/collection")}>Collection</h2>
                         <button onClick={() => Navigate("/login")}>Login</button>
                     </div>
                 </div>

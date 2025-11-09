@@ -26,6 +26,7 @@
     align-self: flex-start;
     display: flex;
     gap: 1rem;
+    cursor: pointer;
 }
 
 .navbar-buttons {
