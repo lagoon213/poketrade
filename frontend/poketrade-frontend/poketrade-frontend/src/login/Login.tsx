@@ -19,7 +19,7 @@ function Login(){
             <input type="password" placeholder="..." />
             <a>Forgot password?</a>
             <button type="submit">Login</button>
-            <p>Don't have an account?<a> Sign up</a></p>
+            <p>Don't have an account?<a onClick={() => navigate("/register")}> Sign up</a></p>
         </form>
         </div>
             <h3 onClick={() => navigate("/")}>cancel</h3>
