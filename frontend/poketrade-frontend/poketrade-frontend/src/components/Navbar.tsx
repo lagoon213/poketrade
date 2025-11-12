@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
     const Navigate = useNavigate();
+    const IsLoggedIn = !!localStorage.getItem("access");
+
     return (
             <div>
                 <div className="navbar">
@@ -15,7 +17,11 @@ export default function Navbar() {
                         <h2 onClick={()=> Navigate("/")}>Home</h2>
                         <h2>Trades</h2>
                         <h2 onClick={() => Navigate("/collection")}>Collection</h2>
-                        <button onClick={() => Navigate("/login")}>Login</button>
+                        {!IsLoggedIn ? (
+                            <button onClick={() => Navigate("/login")}>Login</button>
+                        ) : (
+                            <h2 onClick={() => Navigate("/account")}>Account</h2>
+                            )}
                     </div>
                 </div>
             </div>
