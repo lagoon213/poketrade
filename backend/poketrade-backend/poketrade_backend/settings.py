@@ -140,3 +140,6 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME' : timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
 }
+
+import os
+POKEMON_API_KEY = os.environ.get('e2610b40-91fb-4af6-a3cc-1a6fbceab838')
