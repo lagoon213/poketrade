@@ -30,3 +30,55 @@
     align-self: center;
     margin-top: 300px;
 }
+
+.pokemon-series-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    align-items: center;
+}
+
+.pokemon-series-container li {
+    list-style: none;
+}
+
+.pokemon-series-card {
+    width: 70%;
+    height: 80px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 1.5rem;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.series-left {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.series-name,
+.series-count {
+    background: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.series-date {
+    font-size: 1.2rem;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
