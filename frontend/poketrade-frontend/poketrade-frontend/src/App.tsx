@@ -5,6 +5,7 @@ import Register from "./register/Register";
 import Collection from "./collection/Collection";
 import MyCollection from "./my-collection/My-collection";
 import AddToCollection from "./addToCollection/AddToCollection";
+import SetCardSelection from "./setCardSelection/SetCardSelection";
 
 export default function App() {
     return (
@@ -16,6 +17,8 @@ export default function App() {
                 <Route path={"/collection"} element={<Collection />} />
                 <Route path={"/my-collection"} element={<MyCollection />} />
                 <Route path={"/addtocollection"} element={<AddToCollection />} />
+                <Route path="/set/:setId" element={<SetCardSelection />} />
+
             </Routes>
         </>
     );

@@ -2,13 +2,17 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function AddToCollection() {
+    const navigate = useNavigate();
     const [series, setSeries] = useState<PokemonSeries[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
     type PokemonSeries = {
+        id: string;
         name: string;
         release_date: string;
         total_cards: number;
@@ -40,7 +44,7 @@ export default function AddToCollection() {
 
                 <ul className="pokemon-series-container">
                     {series.map((s, idx) => (
-                        <li key={idx} className="pokemon-series-card" style={{ backgroundImage: `url(${s.logo})` }}>
+                        <li key={idx} className="pokemon-series-card" style={{ backgroundImage: `url(${s.logo})` }} onClick={() => navigate(`/set/${s.id}`)}>
                             <div className="series-left">
                                 <span className="series-name">{s.name}</span>
                                 <span className="series-count">{s.total_cards}/{s.total_cards}</span>
