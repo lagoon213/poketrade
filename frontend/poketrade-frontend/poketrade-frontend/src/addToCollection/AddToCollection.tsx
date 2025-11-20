@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 export default function AddToCollection() {
     const navigate = useNavigate();
     const [series, setSeries] = useState<PokemonSeries[]>([]);
+    const [allSeries, setAllSeries] = useState<PokemonSeries[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
@@ -26,6 +27,7 @@ export default function AddToCollection() {
             .then((data) => {
                 setSeries(data.series || []);
                 setLoading(false);
+                setAllSeries(data.series || []);
             })
             .catch(() => {
                 setError("Kon series niet laden");
@@ -41,6 +43,20 @@ export default function AddToCollection() {
             <div className="add-to-collection-page">
                 <h2>Voeg toe aan collectie</h2>
                 <div className="add-to-collection-upper-page-line"></div>
+
+                <div className="search-bar-container">
+                    <input type="text" className="search-bar" placeholder="Zoek een serie..." onChange={(e) => {
+                        const searchTerm = e.target.value.toLowerCase();
+
+                        if (searchTerm === "") {
+                            setSeries(allSeries);
+                            return;
+                        }
+
+                        const filteredSeries = allSeries.filter(s => s.name.toLowerCase().includes(searchTerm));
+                        setSeries(filteredSeries);
+                    }}/>
+                </div>
 
                 <ul className="pokemon-series-container">
                     {series.map((s, idx) => (
