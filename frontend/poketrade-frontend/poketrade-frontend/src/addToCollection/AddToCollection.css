@@ -1,0 +1,96 @@
+﻿.add-to-collection-page h2 {
+    all: unset;
+    font-family: "Jomolhari", sans-serif;
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.add-to-collection-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.add-to-collection-upper-page-line {
+    width: 90%;
+    height: 1px;
+    background-color: darkgray;
+    margin: 2rem 0;
+    align-self: center;
+}
+
+.add-to-collection-lower-page-line{
+    width: 90%;
+    height: 0.5px;
+    background-color: darkgray;
+    align-self: center;
+    margin-top: 300px;
+}
+
+.pokemon-series-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    align-items: center;
+}
+
+.pokemon-series-container li {
+    list-style: none;
+}
+
+.pokemon-series-card {
+    width: 70%;
+    height: 80px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 1.5rem;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.series-left {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.series-name,
+.series-count {
+    background: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.series-date {
+    font-size: 1.2rem;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.search-bar-container {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.search-bar {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #F6F6F6;
+    border: 1px solid black;
+}

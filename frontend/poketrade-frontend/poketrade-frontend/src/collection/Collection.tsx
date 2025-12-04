@@ -7,30 +7,33 @@ import wishlist from "../assets/wishlist.png";
 import shop from "../assets/shopping-cart.png";
 import trade from "../assets/trade.png";
 
+import {useNavigate} from "react-router-dom";
+
 function Collection() {
+    const navigate = useNavigate();
     return (
         <>
             <Navbar />
 
             <div className="collection-page">
 
-                <h2>Collection</h2>
+                <h2>Collectie</h2>
                 <div className="upper-page-line"></div>
 
                 <div className="collection-buttons">
 
-                    <div className="collection-button">
+                    <div onClick={() => navigate("/my-collection")} className="collection-button">
                         <div className="collection-text">
-                            <h3>My collection</h3>
-                            <p>Manage your owned cards</p>
+                            <h3>Mijn Collectie</h3>
+                            <p>Beheer je kaarten</p>
                         </div>
                         <img src={collection} alt="collection icon" />
                     </div>
 
                     <div className="collection-small-button">
                         <div className="collection-text">
-                            <h3>Wishlist</h3>
-                            <p>Add cards to your wishlist</p>
+                            <h3>Verlanglijst</h3>
+                            <p>Voeg kaarten toe aan je verlanglijst</p>
                         </div>
                         <img src={wishlist} alt="wishlist icon" />
                     </div>
@@ -41,16 +44,16 @@ function Collection() {
 
                     <div className="collection-small-button">
                         <div className="collection-text">
-                            <h3>Shop</h3>
-                            <p>Buy cards from other users or put up cards for sale</p>
+                            <h3>Winkel</h3>
+                            <p>Koop kaarten van andere of verkoop je eigen kaarten</p>
                         </div>
                         <img src={shop} alt="shop icon" />
                     </div>
 
                     <div className="collection-button">
                         <div className="collection-text">
-                            <h3>My trades</h3>
-                            <p>Create and manage your own trade offers</p>
+                            <h3>Mijn Ruilverzoeken</h3>
+                            <p>Maak en beheer je eigen ruil verzoeken</p>
                         </div>
                         <div className="collection-icon">
                             <img src={trade} alt="trade icon" />
