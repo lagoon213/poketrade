@@ -54,6 +54,11 @@ jobs:
           cd frontend/poketrade-frontend/poketrade-frontend
           npm run test
 
+      - name: Run EsLint
+        run: |
+           cd frontend/poketrade-frontend/poketrade-frontend
+           npm run lint
+
       - name: Build frontend
         run: |
           cd frontend/poketrade-frontend/poketrade-frontend
