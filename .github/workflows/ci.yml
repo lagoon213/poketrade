@@ -27,6 +27,11 @@ jobs:
           cd backend/poketrade-backend
           pip install -r requirements.txt
 
+      - name: Run Ruff
+        run: |
+          cd backend/poketrade-backend
+          ruff check .
+
       - name: Run Django checks
         run: |
           cd backend/poketrade-backend
