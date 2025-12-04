@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+from datetime import timedelta
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'users',
+    'pokemon',
 ]
 
 MIDDLEWARE = [
@@ -127,8 +129,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-from datetime import timedelta
-
 REST_FRAMEWORK ={
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -141,5 +141,4 @@ SIMPLE_JWT = {
     'ROTATE_REFRESH_TOKENS': False,
 }
 
-import os
 POKEMON_API_KEY = os.environ.get('e2610b40-91fb-4af6-a3cc-1a6fbceab838')

@@ -110,7 +110,7 @@ export default function SetCardSelection() {
                             </div>)}
 
                         </div>
-                        <img src={card.image} alt={card.name} />
+                        <img src={card.image} alt={card.name} loading="lazy" />
                     </div>
                 ))}
             </div>

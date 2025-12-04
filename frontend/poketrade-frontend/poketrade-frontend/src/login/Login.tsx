@@ -37,7 +37,7 @@ export default function Login() {
                 const errorData = await response.json();
                 setMessage("Fout: " + JSON.stringify(errorData));
             }
-        } catch (error) {
+        } catch{
             setMessage("Server niet bereikbaar");
         }
     };
