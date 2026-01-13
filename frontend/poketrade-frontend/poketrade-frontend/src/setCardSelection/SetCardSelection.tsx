@@ -36,6 +36,26 @@ export default function SetCardSelection() {
         });
     }
 
+    async function submitSelectedCards() {
+        const payload = {
+            set_id : setId,
+            cards: Object.entries(selectedCards)
+                .filter(([_, isSelected]) => isSelected)
+                .map(([cardId]) => ({
+                    card_id: cardId,
+                    amount: chosenCards[cardId] ?? 1
+                }))
+        };
+
+        await fetch("http://127.0.0.1:8000/api/pokemon/save-cards/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+        });
+    }
+
     function setCardAmount(cardId: string, amount: number) {
         setChosenCards(prev => ({
             ...prev,
@@ -118,7 +138,7 @@ export default function SetCardSelection() {
             <div className="set-cards-container">
                 <div className="set-card-collection-bottom-line"></div>
                 <div className="card-page-buttons">
-                    <button className="add-cards-button">Voeg gekozen kaarten toe</button>
+                    <button className="add-cards-button" onClick={submitSelectedCards}>Voeg gekozen kaarten toe</button>
                     <button className="cancel-adding-cards-button">Annuleer toevoegen</button>
                 </div>
             </div>
